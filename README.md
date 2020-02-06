@@ -33,7 +33,7 @@
 
 #### （1）流的类型
   * 字节缓冲流：<br>
-  BufferedInputStream/BufferedOutputStream<br>  
+  <Tab>* BufferedInputStream/BufferedOutputStream<br>  
   * 字符缓冲流：<br>
   BufferedRreader/BufferedWriter
   
