@@ -62,6 +62,10 @@ Writer writer=new FileWriter(Constants.path,true);
 #### （2）流的类型
   * DataInputStream<br>
   * DataOutputStream<br>
+  ```Java
+  DataInputStream dataInputStream=new DataInputStream(new FileInputStream(Constants.path));
+  DataOutputStream dataOutputStream=new DataOutputStream(new FileOutputStream(Constants.path));
+  ```
   
  ### 5、内存流
  
@@ -71,6 +75,10 @@ Writer writer=new FileWriter(Constants.path,true);
  #### （2）流的类型
    * ByteArrayInputStream
    * ByteArrayOutputStream
+   ```Java
+   ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
+   ByteArrayInputStream byteArrayInputStream=new ByteArrayInputStream(buffer);
+   ```
    
   ### 6、打印流
   
@@ -85,6 +93,12 @@ Writer writer=new FileWriter(Constants.path,true);
    printWriter.flush(); 
    ```
    
+   ```Java
+   PrintStream consolePrintStream=new PrintStream(System.out);
+   PrintWriter printWriter=new PrintWriter(new FileOutputStream(Constants.path),true);
+   
+   ```
+   
   #### （3）关于刷新
   使用PrintWriter输出数据,如果启用了自动刷新缓存功能，则只有调用了println、printf 或 format 的其中一个方法时可能完成此操作<br>  
    
@@ -93,6 +107,10 @@ Writer writer=new FileWriter(Constants.path,true);
   #### （1）流类型
    * ObjectInputStream<br>  
    * ObjectOutputStream<br>  
+   ```Java
+   ObjectInputStream objectInputStream=new ObjectInputStream(new FileInputStream(Constants.path));
+   ObjectOutputStream objectOutputStream=new ObjectOutputStream(new FileOutputStream(Constants.path));
+   ```
    
    ### 8、RandomAccessFile
    
@@ -100,6 +118,10 @@ Writer writer=new FileWriter(Constants.path,true);
    #### （1）流类型
    * InputStreamReader
    * OutputStreamWriter
+   ```Java
+   OutputStreamWriter outputStreamWriter=new OutputStreamWriter(new FileOutputStream(Constants.path));
+   InputStreamReader inputStreamReader=new InputStreamReader(new FileInputStream(Constants.path));
+   ```
    
   
   
