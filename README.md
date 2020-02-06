@@ -32,9 +32,9 @@
 ### 3、缓冲流
 
 #### （1）流的类型
-  *字节缓冲流：<br>
+  * 字节缓冲流：<br>
   BufferedInputStream/BufferedOutputStream<br>  
-  *字符缓冲流：<br>
+  * 字符缓冲流：<br>
   BufferedRreader/BufferedWriter
   
 #### （2）必要时调用flush刷新缓冲区  
@@ -54,8 +54,8 @@
  关闭内存流是无效的，因为内存流没有调用操作系统的底层功能。<br>
  
  #### （2）流的类型
-   *ByteArrayInputStream
-   *ByteArrayOutputStream
+   * ByteArrayInputStream
+   * ByteArrayOutputStream
    
   ### 6、打印流
   #### （1）为了能够自动刷新缓冲区，必须使用PrintStream
@@ -70,8 +70,8 @@
    
   ### 7、对象流
   #### （1）流类型
-   *ObjectInputStream<br>  
-   *ObjectOutputStream<br>  
+   * ObjectInputStream<br>  
+   * ObjectOutputStream<br>  
    
    ### 8、RandomAccessFile
    
