@@ -45,6 +45,12 @@ Writer writer=new FileWriter(Constants.path,true);
   BufferedInputStream/BufferedOutputStream<br>  
   * 字符缓冲流：<br>
   BufferedRreader/BufferedWriter
+  ```Java
+  BufferedInputStream bufferedInputStream=new BufferedInputStream(new FileInputStream(Constants.path));
+  BufferedOutputStream bufferedOutputStream=new BufferedOutputStream(new FileOutputStream(Constants.path));
+  BufferedReader bufferedReader=new BufferedReader(new FileReader(Constants.path));
+  BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(Constants.path));
+  ```
   
 #### （2）必要时调用flush刷新缓冲区  
  
