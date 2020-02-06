@@ -12,6 +12,10 @@
 #### （2）流的类型
   * InputStream--->FileInputStream<br>  
   * OutputStream--->FileOutputStream<br>  
+  
+  ```Java
+			InputStream inputStream =new FileInputStream(Constants.path);
+  ```
 
 ### 2、字符流
 
