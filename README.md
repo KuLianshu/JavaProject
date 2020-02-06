@@ -24,9 +24,9 @@
 ### 3、缓冲流
 （1）流的类型<br>  
   * 字节缓冲流：<br>  
-  <Tab>* BufferedInputStream/BufferedOutputStream<br>  
+  *<tab> BufferedInputStream/BufferedOutputStream<br>  
   * 字符缓冲流：<br>
-  <Tab>*BufferedRreader/BufferedWriter<br>  
+  *<tab>BufferedRreader/BufferedWriter<br>  
 （2）必要时调用flush刷新缓冲区<br>  
  
 ### 4、数据流
