@@ -63,11 +63,11 @@
   
   #### （2）flush() 
   ```Java
-  //第一个参数例化PrintWriter并关联文件输出流；第二个参数为true说明启用自动刷新缓冲区功能，false表示禁用自动刷新缓冲区功能<br>  
-  PrintWriter printWriter=printWriter=new PrintWriter(new FileOutputStream(path),true);<br>  
-  printWriter.print(20);<br>  
-  //也可以调用flush()主动刷新<br>  
-   printWriter.flush();<br>  
+  //第一个参数例化PrintWriter并关联文件输出流；第二个参数为true说明启用自动刷新缓冲区功能，false表示禁用自动刷新缓冲区功能
+  PrintWriter printWriter=printWriter=new PrintWriter(new FileOutputStream(path),true);
+  printWriter.print(20);
+  //也可以调用flush()主动刷新
+   printWriter.flush(); 
    ```
    
   #### （3）关于刷新
