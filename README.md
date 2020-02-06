@@ -29,17 +29,18 @@
 （2）必要时调用flush刷新缓冲区
  
 ### 4、数据流
-（1）作用：
+（1）作用：/<br>
 用于向目标设备读写Java基本类型、String类型、对象类型数据的能力（注意数据流操作对象类型的数据时，该类需要序列化需要序列化）。
-（2）流的类型
-  DataInputStream
-  DataOutputStream
+（2）流的类型/<br>
+  DataInputStream/<br>
+  DataOutputStream/<br>
   
  ### 5、内存流
- （1）注意：关闭内存流是无效的，因为内存流没有调用操作系统的底层功能。
- （2）流的类型
-   ByteArrayInputStream
-   ByteArrayOutputStream
+ （1）注意：/<br>
+ 关闭内存流是无效的，因为内存流没有调用操作系统的底层功能。/<br>
+ （2）流的类型/<br>
+   ByteArrayInputStream/<br>
+   ByteArrayOutputStream/<br>
    
   ### 6、打印流
   （1）为了能够自动刷新缓冲区，必须使用PrintStream
