@@ -81,7 +81,10 @@
    
    ### 8、RandomAccessFile
    
-   
+   ### 9、转换流
+   #### （1）流类型
+   * InputStreamReader
+   * OutputStreamWriter
    
   
   
