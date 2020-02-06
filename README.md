@@ -7,9 +7,9 @@ FileAndStreamDemo这个项目包含的内容
 二、Stream
 ----------
 
-# 1、字节流
-## （1）对字节进行操作最基础的流类
-## （2）流的类型
+## 1、字节流
+### （1）对字节进行操作最基础的流类
+### （2）流的类型
   InputStream--->FileInputStream
   OutputStream--->FileOutputStream
 
