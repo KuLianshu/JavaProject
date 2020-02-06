@@ -33,7 +33,7 @@
 
 #### （1）流的类型
   * 字节缓冲流：<br>
-  <Tab>* BufferedInputStream/BufferedOutputStream<br>  
+  BufferedInputStream/BufferedOutputStream<br>  
   * 字符缓冲流：<br>
   BufferedRreader/BufferedWriter
   
@@ -58,17 +58,21 @@
    * ByteArrayOutputStream
    
   ### 6、打印流
+  
   #### （1）为了能够自动刷新缓冲区，必须使用PrintStream
+  
   #### （2）flush() 
   //第一个参数例化PrintWriter并关联文件输出流；第二个参数为true说明启用自动刷新缓冲区功能，false表示禁用自动刷新缓冲区功能<br>  
   PrintWriter printWriter=printWriter=new PrintWriter(new FileOutputStream(path),true);<br>  
   printWriter.print(20);<br>  
   //也可以调用flush()主动刷新<br>  
    printWriter.flush();<br>  
+   
   #### （3）关于刷新
   使用PrintWriter输出数据,如果启用了自动刷新缓存功能，则只有调用了println、printf 或 format 的其中一个方法时可能完成此操作<br>  
    
   ### 7、对象流
+  
   #### （1）流类型
    * ObjectInputStream<br>  
    * ObjectOutputStream<br>  
