@@ -6,7 +6,7 @@
 ## 二、Stream
 
 ### 1、字节流
-（1）对字节进行操作最基础的流类\<br>  
+（1）对字节进行操作最基础的流类<br>  
 （2）流的类型
   InputStream--->FileInputStream
   OutputStream--->FileOutputStream
