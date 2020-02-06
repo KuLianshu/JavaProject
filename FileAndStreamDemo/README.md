@@ -14,7 +14,8 @@
   * OutputStream--->FileOutputStream<br>  
   
   ```Java
-			InputStream inputStream =new FileInputStream(Constants.path);
+InputStream inputStream =new FileInputStream(Constants.path);
+OutputStream outputStream =new FileOutputStream(Constants.path);
   ```
 
 ### 2、字符流
@@ -24,6 +25,10 @@
 #### （2）流的类型
   * Reader--->FileReader<br>  
   * Writer--->FileWriter<br>  
+```Java
+Reader reader=new FileReader(Constants.path);
+Writer writer=new FileWriter(Constants.path,true);
+```
   
 #### （3）字符流=字节流+编码表
 
