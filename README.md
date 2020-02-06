@@ -8,14 +8,14 @@
 ### 1、字节流
 （1）对字节进行操作最基础的流类<br>  
 （2）流的类型<br>  
-  InputStream--->FileInputStream<br>  
-  OutputStream--->FileOutputStream<br>  
+  * InputStream--->FileInputStream<br>  
+  * OutputStream--->FileOutputStream<br>  
 
 ### 2、字符流
 （1）对字符进行操作最基础的流类<br>  
 （2）流的类型<br>  
-  Reader--->FileReader<br>  
-  Writer--->FileWriter<br>  
+  * Reader--->FileReader<br>  
+  * Writer--->FileWriter<br>  
 （3）字符流=字节流+编码表<br>  
 （4）注意：使用FileWriter时，有可能会需要用到flush()<br>  
 （5）flush()：<br>  
@@ -23,16 +23,17 @@
 
 ### 3、缓冲流
 （1）流的类型<br>  
-  字节缓冲流：<br>  
-  BufferedInputStream/BufferedOutputStream<br>  
-  BufferedRreader/BufferedWriter<br>  
+  * 字节缓冲流：<br>  
+  <Tab>* BufferedInputStream/BufferedOutputStream<br>  
+  * 字符缓冲流：<br>
+  <Tab>*BufferedRreader/BufferedWriter<br>  
 （2）必要时调用flush刷新缓冲区<br>  
  
 ### 4、数据流
 （1）作用：<br>
 用于向目标设备读写Java基本类型、String类型、对象类型数据的能力（注意数据流操作对象类型的数据时，该类需要序列化需要序列化）。<br>  
 （2）流的类型<br>
-  DataInputStream<br>
+  * DataInputStream<br>
   DataOutputStream<br>
   
  ### 5、内存流
