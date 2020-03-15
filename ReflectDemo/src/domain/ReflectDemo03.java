@@ -2,7 +2,9 @@ package domain;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-
+/*
+ * 获取public属性的权限
+ */
 public class ReflectDemo03 {
 
 	public static void main(String[] args) {

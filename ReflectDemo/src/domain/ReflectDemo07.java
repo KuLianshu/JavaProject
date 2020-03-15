@@ -35,9 +35,7 @@ public class ReflectDemo07 {
 			Constructor constructor=clz.getConstructor(String.class);
 			//调用构造函数
 			Object con_obj=constructor.newInstance("Hello");
-			Object con_obj2=clz.newInstance();
 			System.out.println("con_obj = "+con_obj);
-			System.out.println("con_obj2 = "+con_obj2);
 			
 			
 		} catch (InstantiationException e) {

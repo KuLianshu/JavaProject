@@ -7,7 +7,7 @@ import java.lang.reflect.Modifier;
 import entity.Student;
 
 /**
- * 根据类模板对象获取类中所有的方法
+ * 根据类模板对象获取类中所有的方法（不限属性）
  * @author KuLianshu
  *
  */
