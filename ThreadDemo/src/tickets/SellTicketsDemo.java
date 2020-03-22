@@ -1,9 +1,15 @@
 package tickets;
 
+/**
+ * 需求：多个售票站同时销售共同的100张，多个多个线程模拟多个售票点进行售票
+ * @author KuLianshu
+ *
+ */
 public class SellTicketsDemo {
 
 	public static void main(String[] args) {
 		
+		//模拟多个售票点
 		MyTickets myTickets_beijing=new MyTickets();
 		myTickets_beijing.setName("北京站");
 		myTickets_beijing.start();

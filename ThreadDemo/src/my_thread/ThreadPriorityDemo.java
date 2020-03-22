@@ -3,7 +3,7 @@ package my_thread;
 import java.lang.Thread.State;
 
 /**
- * 优先级高的线程并不一定会优先运行，优先级的高低只是在同等条件下被CPU选中的几率比较大而已
+ * 优先级高的线程并不一定会优先运行，它只是被CPU选中的几率比较大而已
  * @author KuLianshu
  *
  */
