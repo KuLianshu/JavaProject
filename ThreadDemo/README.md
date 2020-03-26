@@ -68,5 +68,79 @@ t1.start();
 
 ### 五、线程控制
 
-	
+1、start()：新建的线程进入Runnable状态。</br>
+2、run()：线程进入Running状态。</br>
+3、wait()：导致当前的线程等待，直到其他线程调用此对象的notify()方法或notifyAll()唤醒。</br>
+4、
+（1）notify()：唤醒在此对象监视器上等待的单个线程（如果多有线程都在此对象上等待，则会选择唤醒其中一个线程）。</br>
+（2）notifyAll()：唤醒在此对象监视器上等待的所有线程。</br>
+注意：wait()、notify()、notifyAll()只能在被同步化（synchronize）的方法或代码块中调用。
+
+5、yield()：暂停当前正在执行的线程对象，把执行机会让给相同或者更高优先级的线程。</br>
+`````
+Thread t1=new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				for(int i=0;i<10;i++) {
+					System.out.println(Thread.currentThread().getName()+"正在输出i="+i);
+					//当前线程主动让出CPU使用权，给和它具有相同优先级或者比它优先级更高的线程运行
+					Thread.yield();
+				}
+				
+			}
+			
+		});
+`````
+6、getPriority()/setPriority()：获得/设置线程优先级。</br>
+7、sleep()：线程睡眠。</br>
+8、join()：在当前线程中调用另一个线程的join()方法，则当前线程转入WAITING状态，直到另一个线程运行结束，当前线程再由
+阻塞转为就绪状态。</br>
+`````
+Thread t1=new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				for(int i=0;i<300;i++) {
+					System.out.println("线程"+Thread.currentThread().getName()+"正在输出"+i);
+					
+				}
+				
+			}
+			
+		});
+		t1.setName("1");
+		t1.start();
+		
+		for(int i=0;i<10;i++) {
+			System.out.println("线程"+Thread.currentThread().getName()+"正在输出"+i);
+			if(i==5) {
+				try {
+					/*
+					 *当前线程main线程如果调用了线程对象t1的join()方法，则当前线程main会转入waiting状态，指定t1线程运行完毕后，
+					 * 当前线程才会由wating状态自动转化为Runnable状态. 
+					 */
+					t1.join();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+`````
+
+### 六、线程的停止
+
+1、如果线程的run()方法中执行的是一个重复循环，可以提供一个标记来控制循环是否执行（看项目中的实例ThreadStopDemo01）。</br>
+2、如果线程因为执行sleep()或是wait()而进入了阻塞状态，此时想要停止它，可使用interrrupt()，程序会抛出InterruptException异常。</br>
+3、如果程序因为输入输出的等待而阻塞，基本上必须等待输入输出的动作完成才能离开阻塞状态。无法用I=interrupt()方法来使得线程离开run()方法，
+要想离开，只能通过引发一个异常。</br>
+
+### 七、线程的状态转换
+
+#### 任何线程都具有五种状态：创建、就绪、运行、阻塞、终止。
+
+
+
+
+
 
