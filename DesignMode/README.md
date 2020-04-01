@@ -46,7 +46,7 @@ public class Student {
 		System.out.println("======Student()=====");
 	}
 
-	public static  /*synchronized*/ Student getInstance() {
+	public static Student getInstance() {
 		if(instance==null) {
 			synchronized(Student.class) {
 				if(instance==null) {
