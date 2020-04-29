@@ -43,11 +43,11 @@ Thread 基础 三
 	 */
 	resource.notify();
         //唤醒由于调用了resource对象的wait方法而处于等待状态的所有线程,使其转化为可运行状态
-		    //this.notifyAll();
-			}
-			
-			i=(i+1)%2;
+        //this.notifyAll();
 		}
+
+		i=(i+1)%2;
+	}
 
 ````
 问： wait和notify及notifyAll都是Object类中的方法，但这些方法却是操作线程的，为什么不把这些方法定义在Thread类中呢？</br>
