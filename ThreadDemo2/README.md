@@ -4,44 +4,44 @@ Thread 基础 三
 
 #### 1、唤醒同一把锁下等待的线程（wait()/notify()/notifyAll()）
 ````
-			synchronized(resource){
-				if(resource.isProduce) {
-					try {
-						/*
-						 * 让当前线程等待，调用锁对象的wait()方法，
-						 * 产生的效果为：
-						 * 当前线程（生产者线程）被放到当前锁对象的
-						 * 等待池中，并释放所有的锁对象。
-						 */
-						resource.wait();
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
-				
-				if(i==0) {
-					resource.name="张三";
-					resource.sex='男';
-				}else {
-					resource.name="小倩";
-					resource.sex='女';
-				}
-				
-				//将是否生成过的标志置为true，表示已经生产过了
-				resource.isProduce=true;
-				
-				/*
-				 * 当前环境下是通知消费者线程进行消费
-				 * 
-				 * 唤醒由于调用了resource对象的wait()方法而处于
-				 * 等待状态的线程，让这个线程由等待状态转为可运行
-				 * 状态。
-				 * 
-				 * 需要注意的是：如果持有resource锁的线程处于等待
-				 * 状态，则随机唤醒一个，如果没有，则没有任何效果。
-				 * 
-				 */
-				resource.notify();
+    synchronized(resource){
+	if(resource.isProduce) {
+		try {
+			/*
+			 * 让当前线程等待，调用锁对象的wait()方法，
+			 * 产生的效果为：
+			 * 当前线程（生产者线程）被放到当前锁对象的
+			 * 等待池中，并释放所有的锁对象。
+			 */
+			resource.wait();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	if(i==0) {
+		resource.name="张三";
+		resource.sex='男';
+	}else {
+		resource.name="小倩";
+		resource.sex='女';
+	}
+
+	//将是否生成过的标志置为true，表示已经生产过了
+	resource.isProduce=true;
+
+	/*
+	 * 当前环境下是通知消费者线程进行消费
+	 * 
+	 * 唤醒由于调用了resource对象的wait()方法而处于
+	 * 等待状态的线程，让这个线程由等待状态转为可运行
+	 * 状态。
+	 * 
+	 * 需要注意的是：如果持有resource锁的线程处于等待
+	 * 状态，则随机唤醒一个，如果没有，则没有任何效果。
+	 * 
+	 */
+	resource.notify();
         //唤醒由于调用了resource对象的wait方法而处于等待状态的所有线程,使其转化为可运行状态
 		    //this.notifyAll();
 			}
@@ -154,6 +154,8 @@ Thread 基础 三
 ````
 
 ### 停止线程
+
+#### 1、interrupt、设置标记
 ````
 public static void main(String[] args) {
 		MyRunnable myRunnable=new MyRunnable();
