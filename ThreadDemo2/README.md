@@ -2,7 +2,7 @@ Thread 基础 三
 -----------------
 ### 线程等待、线程唤醒
 
-#### 1、wait()/notify()/notifyAll()
+#### 1、唤醒同一把锁下等待的线程（wait()/notify()/notifyAll()）
 ````
 			synchronized(resource){
 				if(resource.isProduce) {
@@ -56,7 +56,7 @@ Thread 基础 三
 （2）锁可以是任意对象，能够被任意对象调用的方法当然只能定义在Object类中。</br>
 
 
-### 2、唤醒特定线程（Lock）
+#### 2、唤醒特定线程（Lock）
 ````
 /**
 	 * 姓名
@@ -153,7 +153,7 @@ Thread 基础 三
 	
 ````
 
-### 3、停止线程
+### 停止线程
 ````
 public static void main(String[] args) {
 		MyRunnable myRunnable=new MyRunnable();
