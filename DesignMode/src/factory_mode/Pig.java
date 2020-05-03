@@ -1,0 +1,21 @@
+package factory_mode;
+
+public class Pig implements Animal{
+
+	@Override
+	public void eat() {
+		System.out.println("====÷Ì≥‘==");
+		
+	}
+
+	@Override
+	public void sleep() {
+		
+		System.out.println("====÷ÌÀØ==");
+	}
+	
+	public void shout() {
+		System.out.println("====÷Ì∫ﬂ∫ﬂΩ–==");
+	}
+
+}
