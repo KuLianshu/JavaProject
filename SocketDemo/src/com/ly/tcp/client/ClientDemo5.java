@@ -22,7 +22,7 @@ public class ClientDemo5 {
 			@Override
 			public void run() {
 				try {
-					socket=new Socket("192.168.43.203",8000);
+					socket=new Socket("192.168.1.3",8000);
 					in=socket.getInputStream();
 					out=socket.getOutputStream();
 					scanner= new Scanner(System.in);
@@ -80,11 +80,11 @@ public class ClientDemo5 {
 			}
 		}
 		
-//		try {
-//			socket.close();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			socket.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		System.out.println("----------finally------");
 	}
