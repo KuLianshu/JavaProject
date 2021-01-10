@@ -11,7 +11,7 @@ public class ZipTest {
 	public static void main(String[] args) {
 		
 		
-//		zipTest1(zipPath);
+//		zipTest1();
 		zipTest2();
 		
 	}
@@ -46,9 +46,8 @@ public class ZipTest {
 		/**
 	     * 解压文件
 	     */
-//	    File zipFile = new File("d:/资料.zip");
 		File zipFile = new File(zipPath);
-	    String path = "E:"+File.separator+"zipfile"+File.separator;
+	    String path = "E:"+File.separator+"Test"+File.separator;
 	    try {
 			UZipFile.unZipFiles(zipFile, path);
 		} catch (IOException e) {
